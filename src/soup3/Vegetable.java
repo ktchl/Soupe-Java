@@ -1,14 +1,13 @@
 package soup3;
 
-abstract class Vegetable {
-	
+abstract class Vegetable implements Calories {
+
 	protected Double poids;
-	
+
 	protected static Double epluchure = 0.1;
-	
-	
-	
-    public abstract Double getPeelingWeight();
-    
-    
+
+	protected Double getPeelingWeight() {
+		return poids * epluchure;
+	}
+
 }

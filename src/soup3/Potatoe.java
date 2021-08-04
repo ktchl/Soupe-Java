@@ -1,9 +1,10 @@
 package soup3;
 
-public class Potatoe extends Vegetable {
+public class Potatoe extends Vegetable implements Calories {
 	
 	
 	private Integer yeux = 10;
+	private Integer calories = 80;
 	
 	public Potatoe() {
 		
@@ -60,6 +61,15 @@ public class Potatoe extends Vegetable {
 		return poidsEpluchure;
 		
 		
+	}
+
+
+	@Override
+	public Integer getCalories() {
+		
+		
+		
+		return (int) Math.round(((this.poids - this.getPeelingWeight()) / pCalories * this.calories)- 5 * this.yeux);
 	}
 
 }
